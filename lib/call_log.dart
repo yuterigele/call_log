@@ -63,6 +63,18 @@ CallType getCallType(int n) {
   if (n == 100) {
     //return the wifi outgoing call
     return CallType.wifiOutgoing;
+  } else if (n == 200) {
+    //return wifiIncoming call
+    return CallType.audioOutgoing;
+  } else if (n == 201) {
+    //return wifiIncoming call
+    return CallType.audioIncoming;
+  } else if (n == 300) {
+    //return wifiIncoming call
+    return CallType.videoOutgoing;
+  } else if (n == 301) {
+    //return wifiIncoming call
+    return CallType.videoIncoming;
   } else if (n == 101) {
     //return wifiIncoming call
     return CallType.wifiIncoming;
@@ -169,4 +181,11 @@ enum CallType {
 
   ///wifi outgoing
   wifiOutgoing,
+  audioIncoming,
+
+  audioOutgoing,
+
+  videoIncoming,
+
+  videoOutgoing,
 }
